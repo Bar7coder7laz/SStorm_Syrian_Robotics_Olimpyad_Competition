@@ -4,13 +4,14 @@
 
 The vehicle main body is based on Picar-x kit and the building instructions are available via the [link](https://github.com/sunfounder/sf-pdf/raw/master/assembly_file/a0000710-picar-x.pdf) with some vital modifications and crucial restructuring in order to be able to meet the competition requirements:
 
-The robot Rear Wheel Drive (RWD) is the most important factor in any car whether it is a real car or a self-driving car. The Picar-x kit had two DC motors each one is responsible for one wheel. However, we are required to use one DC so we crafted a new design for the RWD. In this design, the transmission of motion is achieved through the implementation of two interlocking gears, one possessing 21 teeth and the other 20. This particular arrangement is pivotal to the vehicle's mechanical framework providing a refined method for motion transfer. The precise interaction between these gears is essential for facilitating accurate and efficient movement. By optimizing the engagement of these gears the system enhances the vehicle's operational precision and reliability which are crucial for autonomous navigation. This gear configuration not only reduces mechanical complexity but also improves the vehicle’s overall performance and dependability.
+The robot Rear Wheel Drive (RWD) is the most important factor in any car whether it is a real car or a self-driving car. The Picar-x kit had two DC motors each one is responsible for one wheel. However, we are required to use one DC so we crafted a new design for the RWD. In this design, the transmission of motion is achieved through the implementation of differential gears using LEGO parts.
+### The Importance of Differential Gears
+Our robot's differential gear is an essential part that enables the rear wheels to spin simultaneously at various speeds while preserving power distribution. When the robot is turning or there is a discrepancy in traction between the two wheels, the differential gear's main job is to allow the wheels on the same axle to rotate at different rates. It permits the wheels to spin at different speeds while distributing torque from the engine to them.
 
-We added also one more plexi plate for the robot main chassis due to the lack of space and we needed for the sake of our algorithm a place for the mpu 6050 and a place for seven ultrasonic sensors (three on each side and one in the front).
+
+Due to space constraints, we also added two extra plexi plates to the primary chassis of the robot. The first plexi was required for eight ultrasonic sensors (three on each side, one in front, and one in the back), a location for the MPU 6050, and a place for our main microcontroller is Atmega which is mounted on Arduino Mega 2560 board. The RaspberryPi 4B, our robot's primary microprocessor, is located in the second plexi. On the other hand, the RaspberryPi is linked to a camera module that is located on two SG90 Servos, one of which moves it horizontally and the other vertically.
 
 To control the DC motor we used BTS 7960 instead of the integrated motor driver in the Robot Hat. We removed the IR sensors provided in the main kit. We replaced the front wheels with other ones that provide more friction due to the fact that the robot needs more force to steer at the right value. We replaced the back wheels with the Picar-x one because of the lack of resources to get appropriate wheels for the edited DC mechanism.
-
-Main Microcontroller is Atmega mounted on Arduino Mega 2560 board.
 
 ## Mobility Management
 
