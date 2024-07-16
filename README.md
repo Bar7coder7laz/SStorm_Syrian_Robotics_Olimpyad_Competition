@@ -96,7 +96,10 @@ The reference angle is the angle measured by the gyroscope at the beginning of t
 
 The angle error is the difference between the angle measured by the gyroscope during the movement and the reference angle.
 
-\[ \text{angError}_t = \text{Ang}_t - \text{Ang}_{t-1} \]
+$$
+\text{angError}_t = \text{Ang}_t - \text{Ang}_{t-1}
+$$
+
 
 #### Calculating the PD Output
 
