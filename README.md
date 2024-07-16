@@ -100,11 +100,11 @@ The angle error is the difference between the angle measured by the gyroscope du
   <img src="https://latex.codecogs.com/svg.latex?\color{White}\text{angError}_t%20=%20\text{Ang}_t%20-%20\text{Ang}_{t-1}%20\quad%20(1)" style="background-color: black; padding: 10px; border-radius: 5px; width: 30%;">
 </p>
 
-
-
 #### Calculating the PD Output
 
-\[ \text{out} = k_p \times \text{angError}_t + k_d \times \frac{\text{angError}_t - \text{angError}_{t-1}}{\text{timeDifference}} \]
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.latex?\color{White}\text{out}%20=%20k_p%20\times%20\text{angError}_t%20+%20k_d%20\times%20\frac{\text{angError}_t%20-%20\text{angError}_{t-1}}{\text{timeDifference}}" style="background-color: black; padding: 10px; border-radius: 5px; width: 30%;">
+</p>
 
 Where:
 - out is the output correction of the algorithm.
@@ -118,7 +118,9 @@ Where:
 
 The corrected angle is the angle that would be set to the servo motor to correct the robot movement. It is calculated with the following formula:
 
-\[ \text{correctedAng} = \text{servoAng} - \text{out} \]
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.latex?\color{White}\text{correctedAng}%20=%20\text{servoAng}%20-%20\text{out}" style="background-color: black; padding: 10px; border-radius: 5px; width: 30%;">
+</p>
 
 Where:
 - servoAng is the angle that would be set to the servo motor to keep the robot straight.
@@ -135,7 +137,9 @@ After identifying the direction of movement the robot will be kept straight depe
 
 This angle is calculated depending on the readings of the two left or two right ultrasonic sensors as follows:
 
-\[ \text{tiltAng} = \arctan\left(\frac{\text{dis1} - \text{dis2}}{\text{UltraDis}}\right) \]
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.latex?\color{White}\text{tiltAng}%20=%20\arctan\left(\frac{\text{dis1}%20-%20\text{dis2}}{\text{UltraDis}}\right)" style="background-color: black; padding: 10px; border-radius: 5px; width: 30%;">
+</p>
 
 Where:
 - dis1 is the distance measured by the front left or front right ultrasonic sensor.
@@ -146,7 +150,9 @@ Where:
 
 The corrected angle is the angle that would be set to the servo motor to correct the robot movement and is calculated as follows:
 
-\[ \text{correctedAng} = \text{StraightAng} - \text{sign} \times k_p \times \text{tiltAng} \]
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.latex?\color{White}\text{correctedAng}%20=%20\text{StraightAng}%20-%20\text{sign}%20\times%20k_p%20\times%20\text{tiltAng}" style="background-color: black; padding: 10px; border-radius: 5px; width: 30%;">
+</p>
 
 Where:
 - correctedAng is the angle that would be set to servo motor to correct the robot movement.
@@ -163,9 +169,13 @@ A turn is detected if one of the ultrasonic sensors whose IDs are stored in arr2
 
 Once a turn is detected the robot would turn left or right depending on the identified movement direction. The turn angle is calculated depending on the tilt angle of the robot before the turn. After the turn angle is calculated the robot would turn until the difference between the current gyro angle and the reference gyro angle would be equal to turn angle. The turn angle is calculated as following:
 
-\[ \text{turnLeftAng} = \text{requiredLeftAng} - \text{tiltAng} \]
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.latex?\color{White}\text{turnLeftAng}%20=%20\text{requiredLeftAng}%20-%20\text{tiltAng}" style="background-color: black; padding: 10px; border-radius: 5px; width: 30%;">
+</p>
 
-\[ \text{turnRightAng} = \text{requiredRightAng} - \text{tiltAng} \]
+<p align="center">
+  <img src="https://latex.codecogs.com/svg.latex?\color{White}\text{turnRightAng}%20=%20\text{requiredRightAng}%20-%20\text{tiltAng}" style="background-color: black; padding: 10px; border-radius: 5px; width: 30%;">
+</p>
 
 Where: 
 - turnLeftAng is the required change in gyro angle to complete the left turn.
