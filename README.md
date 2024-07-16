@@ -151,7 +151,7 @@ Where:
 The corrected angle is the angle that would be set to the servo motor to correct the robot movement and is calculated as follows:
 
 <p align="center">
-  <img src="https://latex.codecogs.com/svg.latex?\color{White}\text{correctedAng}%20=%20\text{StraightAng}%20-%20\text{sign}%20\times%20k_p%20\times%20\text{tiltAng}" style="background-color: black; padding: 10px; border-radius: 5px; width: 30%;">
+  <img src="https://latex.codecogs.com/svg.latex?\color{White}\text{correctedAng}%20=%20\text{StraightAng}%20-%20\text{sign}%20\times%20k_p%20\times%20\text{tiltAng}" style="background-color: black; padding: 10px; border-radius: 5px; width: 40%;">
 </p>
 
 Where:
@@ -170,11 +170,11 @@ A turn is detected if one of the ultrasonic sensors whose IDs are stored in arr2
 Once a turn is detected the robot would turn left or right depending on the identified movement direction. The turn angle is calculated depending on the tilt angle of the robot before the turn. After the turn angle is calculated the robot would turn until the difference between the current gyro angle and the reference gyro angle would be equal to turn angle. The turn angle is calculated as following:
 
 <p align="center">
-  <img src="https://latex.codecogs.com/svg.latex?\color{White}\text{turnLeftAng}%20=%20\text{requiredLeftAng}%20-%20\text{tiltAng}" style="background-color: black; padding: 10px; border-radius: 5px; width: 30%;">
+  <img src="https://latex.codecogs.com/svg.latex?\color{White}\text{turnLeftAng}%20=%20\text{requiredLeftAng}%20-%20\text{tiltAng}" style="background-color: black; padding: 10px; border-radius: 5px; width: 40%;">
 </p>
 
 <p align="center">
-  <img src="https://latex.codecogs.com/svg.latex?\color{White}\text{turnRightAng}%20=%20\text{requiredRightAng}%20-%20\text{tiltAng}" style="background-color: black; padding: 10px; border-radius: 5px; width: 30%;">
+  <img src="https://latex.codecogs.com/svg.latex?\color{White}\text{turnRightAng}%20=%20\text{requiredRightAng}%20-%20\text{tiltAng}" style="background-color: black; padding: 10px; border-radius: 5px; width: 40%;">
 </p>
 
 Where: 
