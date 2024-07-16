@@ -96,7 +96,9 @@ The reference angle is the angle measured by the gyroscope at the beginning of t
 
 The angle error is the difference between the angle measured by the gyroscope during the movement and the reference angle.
 
-\[ \text{angError}_t = \text{Ang}_t - \text{Ang}_{t-1} \quad (1) \]
+<p align="center">
+  <img src="https://render.githubusercontent.com/render/math?math=%5Ctext%7BangError%7D_t%20%3D%20%5Ctext%7BAng%7D_t%20-%20%5Ctext%7BAng%7D_%7Bt-1%7D%20%5Cquad%20(1)">
+</p>
 
 
 
