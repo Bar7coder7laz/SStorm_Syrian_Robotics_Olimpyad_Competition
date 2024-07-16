@@ -103,7 +103,7 @@ The angle error is the difference between the angle measured by the gyroscope du
 #### Calculating the PD Output
 
 <p align="center">
-  <img src="https://latex.codecogs.com/svg.latex?\color{White}\text{out}%20=%20k_p%20\times%20\text{angError}_t%20+%20k_d%20\times%20\frac{\text{angError}_t%20-%20\text{angError}_{t-1}}{\text{timeDifference}}" style="background-color: black; padding: 10px; border-radius: 5px; width: 30%;">
+  <img src="https://latex.codecogs.com/svg.latex?\color{White}\text{out}%20=%20k_p%20\times%20\text{angError}_t%20+%20k_d%20\times%20\frac{\text{angError}_t%20-%20\text{angError}_{t-1}}{\text{timeDifference}}" style="background-color: black; padding: 10px; border-radius: 5px; width: 50%;">
 </p>
 
 Where:
