@@ -2,7 +2,7 @@
 
 ## Vehicle Main Body
 
-The vehicle main body is based on Picar-x kit and the building instructions are available via the link with some vital modifications and crucial restructuring in order to be able to meet the competition requirements:
+The vehicle main body is based on Picar-x kit and the building instructions are available via the [link](https://github.com/sunfounder/sf-pdf/raw/master/assembly_file/a0000710-picar-x.pdf) with some vital modifications and crucial restructuring in order to be able to meet the competition requirements:
 
 The robot Rear Wheel Drive (RWD) is the most important factor in any car whether it is a real car or a self-driving car. The Picar-x kit had two DC motors each one is responsible for one wheel. However, we are required to use one DC so we crafted a new design for the RWD. In this design, the transmission of motion is achieved through the implementation of two interlocking gears, one possessing 21 teeth and the other 20. This particular arrangement is pivotal to the vehicle's mechanical framework providing a refined method for motion transfer. The precise interaction between these gears is essential for facilitating accurate and efficient movement. By optimizing the engagement of these gears the system enhances the vehicle's operational precision and reliability which are crucial for autonomous navigation. This gear configuration not only reduces mechanical complexity but also improves the vehicle’s overall performance and dependability.
 
@@ -95,6 +95,7 @@ The reference angle is the angle measured by the gyroscope at the beginning of t
 #### Calculating Angle Error
 
 The angle error is the difference between the angle measured by the gyroscope during the movement and the reference angle.
+
 \[ \text{angError}_t = \text{Ang}_t - \text{Ang}_{t-1} \]
 
 #### Calculating the PD Output
@@ -112,6 +113,7 @@ Where:
 #### Calculating the Corrected Angle
 
 The corrected angle is the angle that would be set to the servo motor to correct the robot movement. It is calculated with the following formula:
+
 \[ \text{correctedAng} = \text{servoAng} - \text{out} \]
 
 Where:
@@ -128,6 +130,7 @@ After identifying the direction of movement the robot will be kept straight depe
 #### Calculating the Tilt Angle of the Robot
 
 This angle is calculated depending on the readings of the two left or two right ultrasonic sensors as follows:
+
 \[ \text{tiltAng} = \arctan\left(\frac{\text{dis1} - \text{dis2}}{\text{UltraDis}}\right) \]
 
 Where:
@@ -138,6 +141,7 @@ Where:
 #### Calculating the Corrected Angle
 
 The corrected angle is the angle that would be set to the servo motor to correct the robot movement and is calculated as follows:
+
 \[ \text{correctedAng} = \text{StraightAng} - \text{sign} \times k_p \times \text{tiltAng} \]
 
 Where:
@@ -154,7 +158,9 @@ A turn is detected if one of the ultrasonic sensors whose IDs are stored in arr2
 ### Turning the Robot
 
 Once a turn is detected the robot would turn left or right depending on the identified movement direction. The turn angle is calculated depending on the tilt angle of the robot before the turn. After the turn angle is calculated the robot would turn until the difference between the current gyro angle and the reference gyro angle would be equal to turn angle. The turn angle is calculated as following:
+
 \[ \text{turnLeftAng} = \text{requiredLeftAng} - \text{tiltAng} \]
+
 \[ \text{turnRightAng} = \text{requiredRightAng} - \text{tiltAng} \]
 
 Where: 
