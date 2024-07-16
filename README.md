@@ -151,7 +151,7 @@ Where:
 The corrected angle is the angle that would be set to the servo motor to correct the robot movement and is calculated as follows:
 
 <p align="center">
-  <img src="https://latex.codecogs.com/svg.latex?\color{White}\text{correctedAng}%20=%20\text{StraightAng}%20-%20\text{sign}%20\times%20k_p%20\times%20\text{tiltAng}" style="background-color: black; padding: 10px; border-radius: 5px; width: 40%;">
+  <img src="https://latex.codecogs.com/svg.latex?\color{White}\text{correctedAng}%20=%20\text{StraightAng}%20-%20\text{sign}%20\times%20k_p%20\times%20\text{tiltAng}" style="background-color: black; padding: 10px; border-radius: 5px; width: 50%;">
 </p>
 
 Where:
